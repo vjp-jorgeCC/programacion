@@ -34,7 +34,7 @@ public class Ejercicio32T2 {
         cartera=cartera%5;
         moneda2=cartera/2;
         cartera=cartera%2;
-        moneda1=cartera/1;
+        moneda1=cartera;
         
         System.out.println(carteraAux+" Euros se descomponen en "+billete50+" billetes de 50, "+billete20+ " billetes de 20, "+billete10+" billetes de 10, "
         +billete5+" billetes de 5, "+moneda2+" monedas de 2 euros y "+moneda1+" moendas de 1 euro.");
