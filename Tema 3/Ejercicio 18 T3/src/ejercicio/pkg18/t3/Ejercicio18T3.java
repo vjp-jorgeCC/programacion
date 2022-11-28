@@ -24,12 +24,10 @@ public class Ejercicio18T3 {
         do {
             System.out.println("Por favor introduzca una contraseña: ");
             numero=entrada.nextInt();
+            i++;
             if (contraseña==numero) {
                 System.out.println("Enhorabuena");
                 acierto = true;
-            }
-            else{
-                i++;
             }
             if ((i==3)&&(contraseña!=numero)) {
                 System.out.println("Te has equivocado ");                
