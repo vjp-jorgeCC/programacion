@@ -33,6 +33,6 @@ public class Ejercicio18T3 {
                 System.out.println("Te has equivocado ");                
             }
         } 
-        while ((i<3)&&(acierto == false));//tambien se puede poner como "!acierto"
+        while ((i<3)&&(acierto == false));//Tambien se puede poner como "!acierto"
     }    
 }
