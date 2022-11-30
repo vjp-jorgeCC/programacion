@@ -15,16 +15,14 @@ public class Ejercicio28T3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        double aleatorio=(Math.random())*100+1;
-        aleatorio=Math.floor(aleatorio);
-        System.out.println("El numero generado es: "+aleatorio);
-        if ((aleatorio%2)==0) {
+        double aleatorio=(Math.random()*100+1);
+        int numero=(int)aleatorio;
+        System.out.println("El numero generado es: "+numero);
+        if ((numero%2)==0) {
             System.out.println("El numero generado es Par.");            
         }
         else{
             System.out.println("El numero generado es Impar.");
-        }
-           
-    }
-    
+        }           
+    }    
 }
