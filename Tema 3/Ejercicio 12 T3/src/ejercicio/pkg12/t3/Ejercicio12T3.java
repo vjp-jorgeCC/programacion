@@ -17,8 +17,8 @@ public class Ejercicio12T3 {
     public static void main(String[] args) {
         int numero, resto;
         numero=11;
-        do {
-            if ((numero%2)==0) {
+        do {//Repito el bucle siempre que mi constante numero sea menor que 133
+            if ((numero%2)==0) {//Si es para lo guardo y lo muestro
                 System.out.println(numero);                
             }
             numero++;            

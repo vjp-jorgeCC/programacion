@@ -21,7 +21,7 @@ public class Ejercicio06T3 {
       int nota;
         System.out.println("Escribe la nota ");
         nota=entrada.nextInt();
-        switch (nota){
+        switch (nota){//Si la nota esta entre el 0 y 4 muestro suspenso
             case 0:
             case 1:
             case 2:
@@ -29,15 +29,15 @@ public class Ejercicio06T3 {
             case 4:
                 System.out.println("Suspenso");
                 break;
-            case 5:
+            case 5://Si esta entre 5 y 6 muestro bien
             case 6:
                 System.out.println("Bien");
                 break;
-            case 7:
+            case 7://Si esta entre 7 y 8 muestro notable
             case 8:
                 System.out.println("Notable");
                 break;
-            case 9:
+            case 9://Si esta entre 9 y 10 muestro sobresaliente
             case 10:
                 System.out.println("Sobresaliente");
                 break;

@@ -17,14 +17,14 @@ public class Ejercicio15T3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner entrada=new Scanner (System.in);
+        Scanner entrada=new Scanner (System.in);//Declaro scanner
         int i,numero;
         System.out.println("Introduce un numero para calcular su tabla de multiplicar: ");
         numero=entrada.nextInt();
-        for ( i = 0; i <= 10; i++) {
-            System.out.println(numero+" * "+i+" = "+numero*i);
+        for ( i = 0; i <= 10; i++) {//Se repite del 0 al 10, cuando es 10 para
+            System.out.println(numero+" * "+i+" = "+numero*i);//Hago la tabla de multiplicar con la constante numero recogida por el usuario
         }
-        i++;
+        i++;//Incremento de uno en uno
     }
     
 }

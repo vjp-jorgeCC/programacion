@@ -17,15 +17,15 @@ public class Ejercicio01T3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner entrada = new Scanner (System.in);
+        Scanner entrada = new Scanner (System.in);//Declaro el scanner
         int numero;
         System.out.println("Por favor, introduzca un numero ");
         numero= entrada.nextInt();
-        if (numero<0){
+        if (numero<0){//Si el numero es menor que 0, es negativo y lo muestro
             System.out.println("El numero introducido es Negativo");
         }
         else{
-            if (numero>0){
+            if (numero>0){//Si el numero es mayor que 0, es positivo y lo muestro
                 System.out.println("El numero introducido es Positivo");               
             }
         }

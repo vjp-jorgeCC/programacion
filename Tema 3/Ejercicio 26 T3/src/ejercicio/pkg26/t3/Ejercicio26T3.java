@@ -23,7 +23,7 @@ public class Ejercicio26T3 {
         numero1=entrada.nextInt();
         System.out.println("Introduzca un segundo numero: ");
         numero2=entrada.nextInt();
-        do {                 
+        do {//Creo un menu                 
         System.out.println("1.-Sumar los numeros.");
         System.out.println("2.-Restar los numeros.");
         System.out.println("3.-Multiplicar los numeros.");
@@ -31,19 +31,19 @@ public class Ejercicio26T3 {
         System.out.println("5.-Salir del programa.");
         menu=entrada.nextInt();   
         switch(menu){
-            case 1:
+            case 1://si pulsa el 1 sumo
                 suma=numero1+numero2;
                 System.out.println("El resultado de la suma es: "+suma);
                 break;
-            case 2:
+            case 2://si pulsa el 2 resto
                 resta=numero1-numero2;
                 System.out.println("El resultado de la resta es: "+resta);
                 break;
-            case 3:
+            case 3://si pulsa 3 multiplico
                 multiplicar=numero1*numero2;
                 System.out.println("El resultado de la multiplicacion es: "+multiplicar);
                 break;
-            case 4:
+            case 4://si pulso el 4 divido
                 try{
                     dividir=numero1/numero2;
                 }
@@ -53,12 +53,12 @@ public class Ejercicio26T3 {
                 }
                 System.out.println("El resultado de la division es: "+dividir);
                 break;
-            case 5:
+            case 5://si pulso el 5 salgo del programa
                 System.out.println("¡Hasta luego!");
                 break;
             default:
                 System.out.println("Opcion incorrecta");
         }
-      } while (menu !=5);         
+      } while (menu !=5);//se repite siempre y cuando sea distinto a 5         
     }    
 }

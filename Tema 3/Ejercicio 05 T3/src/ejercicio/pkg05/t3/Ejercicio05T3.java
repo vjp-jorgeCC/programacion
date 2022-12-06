@@ -21,7 +21,7 @@ public class Ejercicio05T3 {
         int numero;
         System.out.println("Introduce un numero ");
         numero = entrada.nextInt();
-        if ((numero%2) == 0){
+        if ((numero%2) == 0){//Si el resto de dividir entre 2 es 0 significa que es par
             System.out.println("El numero "+numero+" es par");
         }
         else{

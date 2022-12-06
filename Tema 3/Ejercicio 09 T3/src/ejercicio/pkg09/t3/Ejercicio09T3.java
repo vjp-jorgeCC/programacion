@@ -27,18 +27,18 @@ public class Ejercicio09T3 {
         num3=entrada.nextInt();
         System.out.println("Por favor, introduzca el cuarto numero :");
         num4=entrada.nextInt();
-        for(num=0;num<3;num++){
-            if(num1>num2){
+        for(num=0;num<3;num++){//repito este bucle 3 veces para ordenar los numeros
+            if(num1>num2){//Si el numero 2 es mayor que el 1 lo actualizo
                 numAux=num1;
                 num1=num2;
                 num2=numAux;
             }
-            if(num2>num3){
+            if(num2>num3){//Si el numero 3 es mayor que el 2 lo actualizo
                 numAux=num2;
                 num2=num3;
                 num3=numAux;
             }
-            if(num3>num4){
+            if(num3>num4){//Si el numero 4 es mayor que el 3 lo actualizo
                 numAux=num3;
                 num3=num4;
                 num4=numAux;

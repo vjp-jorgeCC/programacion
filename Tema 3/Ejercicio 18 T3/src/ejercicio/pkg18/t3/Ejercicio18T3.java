@@ -19,17 +19,17 @@ public class Ejercicio18T3 {
     public static void main(String[] args) {
         Scanner entrada=new Scanner (System.in);
         int i=0,contrasena, numero;
-        boolean acierto = false;
+        boolean acierto = false;//Guardo el boolean para cuando acierte la contraseña
         contrasena=1234;
         do {
             System.out.println("Por favor introduzca una contraseña: ");
             numero=entrada.nextInt();
             i++;
-            if (contrasena==numero) {
+            if (contrasena==numero) {//Si acierta la contraseña cambio el boolean
                 System.out.println("Enhorabuena");
                 acierto = true;
             }
-            if ((i==3)&&(contrasena!=numero)) {
+            if ((i==3)&&(contrasena!=numero)) {//Si no es correcta le digo que se equivocay lo repito siempre y cuando sea incorrecta
                 System.out.println("Te has equivocado ");                
             }
         } 

@@ -15,11 +15,11 @@ public class Ejercicio15T2 {
         int minutos;
         int horas;
         int segundos;
-        segundos=tiempo%60;
-        tiempo=tiempo/60;
-        minutos=tiempo%60;
-        tiempo=tiempo/60;
-        horas=tiempo%60;        
+        segundos=tiempo%60;//Saco el resto que me queda de dividir el tiempo entre 60
+        tiempo=tiempo/60;//Lo convierto a minutos
+        minutos=tiempo%60;//Me quedo con el resto de los minutos
+        tiempo=tiempo/60;//Lo convierto a horas
+        horas=tiempo%60;//Me quedo con el resto        
         System.out.println("10.000 segundos hacen un total de: "+horas+" horas, "+minutos+" minutos y "+segundos+" segundos.");
                 
         

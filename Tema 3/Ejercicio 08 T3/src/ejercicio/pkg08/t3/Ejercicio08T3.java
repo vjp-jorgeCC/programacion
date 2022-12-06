@@ -34,22 +34,22 @@ public class Ejercicio08T3 {
         cartera=cartera%2;
         monedas1=cartera/1;
         System.out.println(carteraAux+" Euros se descomponen en: ");
-        if (billetes50>0){
+        if (billetes50>0){//Si tienes billetes lo muestro
             System.out.println("Billetes de 50 : "+billetes50);    
         }
-        if (billetes20>0){
+        if (billetes20>0){//Si tienes billetes lo muestro
             System.out.println("Billetes de 20: "+billetes20);
         }
-        if (billetes10>0){
+        if (billetes10>0){//Si tienes billetes lo muestro
             System.out.println("Billetes de 10: "+billetes10);
         }
-        if (billetes5>0){
+        if (billetes5>0){//Si tienes billetes lo muestro
             System.out.println("Billetes de 5 : "+billetes5);    
         }
-        if (monedas2>0){
+        if (monedas2>0){//Si tienes billetes lo muestro
             System.out.println("Monedas de 2: "+monedas2);
         }
-        if (monedas1>0){
+        if (monedas1>0){//Si tienes billetes lo muestro
             System.out.println("Monedas de 1: "+monedas1);
         }
     }
