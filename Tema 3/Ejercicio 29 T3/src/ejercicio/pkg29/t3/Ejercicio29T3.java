@@ -19,8 +19,8 @@ public class Ejercicio29T3 {
      */
     public static void main(String[] args) {
         Scanner entrada=new Scanner (System.in);
-        double aleatorio=(Math.random()*100+1);
-        int aleatorioEntero=(int)aleatorio;
+        double aleatorio=(Math.random()*100+1);//Genero un numero aleatorio
+        int aleatorioEntero=(int)aleatorio;//Convierto el numero aleatorio a entero
         int numero,contador;//Creo las variables
         numero=0;
         contador=0;
@@ -36,21 +36,19 @@ public class Ejercicio29T3 {
         finally{                    
             if (aleatorioEntero < numero) {//Le digo si el numero es mayor
                 System.out.println("El numero es menor");
-                contador++;
+                contador++;//Añado ese intento al contador
             }
             else{
                 if (aleatorioEntero > numero) {//Le digo si el numero es menor
                     System.out.println("El numero es mayor");
-                    contador++;                    
+                    contador++;//Añado ese intento al contador                    
                 }
             }
         }       
         } while (aleatorioEntero != numero);
-        if (numero == aleatorioEntero) {//Si acierta el numero le muestro los intentos
-            System.out.println("Enhorabuena has adivinado el numero, que es: "+numero);
-            System.out.println("El numero de intentos han sido: "+contador);
-            
-        }
+            System.out.println("Enhorabuena has adivinado el numero, que es el: "+numero);
+            System.out.println("El numero de intentos han sido: "+contador);            
     }
-    
 }
+    
+

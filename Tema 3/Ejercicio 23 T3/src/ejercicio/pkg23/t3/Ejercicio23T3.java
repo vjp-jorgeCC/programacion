@@ -23,13 +23,12 @@ public class Ejercicio23T3 {
             System.out.println("Porfavor introduzca un numero");
             numero=entrada.nextInt();
             if (numero<1) {
-                System.out.println("Erro, introduce un numero mayor que 1");
+                System.out.println("Error, introduce un numero mayor que 1");
             }
         } while (numero<1);
         for (int i = 1; i <=numero ; i++) {
             System.out.println(i);
             
         }
-    }
-    
+    }    
 }
