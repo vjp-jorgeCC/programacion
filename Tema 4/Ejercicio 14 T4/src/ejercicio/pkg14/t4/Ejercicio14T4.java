@@ -3,47 +3,49 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejercicio.pkg13.t4;
+package ejercicio.pkg14.t4;
 
 import java.util.Scanner;
 
 /**
  *
- * @author jorge
+ * @author jcidc07
  */
-public class Ejercicio13T4 {
+public class Ejercicio14T4 {
     public static int numeroUsuario(){
         int numero;
-        Scanner entrada = new Scanner(System.in);
-            System.out.println("Introduce un numero: ");
-            numero=entrada.nextInt();
+        Scanner entrada = new Scanner (System.in);
+        System.out.println("Introduce un numero: ");
+        numero=entrada.nextInt();
         return numero;
     }
     public static boolean comprobador(int n1){
-        boolean comprobar=false;
-        if (n1>1) {
-            comprobar=true;
+        boolean mayor=false;
+        if (n1>=0) {
+            mayor=true;
         }
         else{
-            System.out.println("ERROR!! Introduce un numero mayor que 1");
+            System.out.println("ERROR!! Introduce un numero mayor que 0");
         }
-        return comprobar;
+        return mayor;
     }
-    public static void resultado(int n1){
+    public static void resultado (int n1){
+        System.out.println("Los numeros multiplos de 3 entre el 1 y el "+n1+" son: ");
         for (int i = 1; i <= n1; i++) {
-            System.out.println(i);
+            if ((i%3)==0) {
+                System.out.println(i);
+            }
+            
         }
     }
     public static void main(String[] args) {
         int numero;
         boolean comprobar;
-        
-        //SIEMPRE QUE EL BOOLEAN SEA FALSO LLAMO AL METODO DE PEDIR NUMERO Y LO COMPRUEBO
         do {
             numero=numeroUsuario();
             comprobar=comprobador(numero);
         } while (comprobar==false);
-        resultado(numero);            
+        resultado(numero);
     }
     
 }
