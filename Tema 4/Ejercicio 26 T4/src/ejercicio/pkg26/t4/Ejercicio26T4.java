@@ -5,17 +5,37 @@
  */
 package ejercicio.pkg26.t4;
 
+import java.util.Scanner;
+
 /**
  *
- * @author jorge
+ * @author jcidc07
  */
 public class Ejercicio26T4 {
-
-    /**
-     * @param args the command line arguments
-     */
+    public static boolean esPrimo(int n1){
+        boolean primo=true;
+        int divisor=2;
+        while((primo)&&(n1!=divisor)){
+            if  (n1 % divisor == 0){
+                primo=false;    
+            }
+            divisor++;
+        }
+        return primo;
+    }
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner entrada =new Scanner (System.in);
+        int numero;
+        boolean primo;
+        System.out.println("Introduce un numero: ");
+        numero=entrada.nextInt();
+        primo=esPrimo(numero);
+        if (primo==false) {
+            System.out.println("No es primo");
+        }
+        else{
+            System.out.println("Es primo");
+        }
     }
     
 }
