@@ -9,23 +9,33 @@ import java.util.Scanner;
 
 /**
  *
- * @author jorge
+ * @author jorge y miguel angel
  */
 public class Ejercicio05T3 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+    public static int pedirNumero(){
         Scanner entrada = new Scanner (System.in);
-        int numero;
-        System.out.println("Introduce un numero ");
-        numero = entrada.nextInt();
-        if ((numero%2) == 0){//Si el resto de dividir entre 2 es 0 significa que es par
-            System.out.println("El numero "+numero+" es par");
+        int numeroUsuario;
+        System.out.println("Miguel Angel, Introduce un numero");
+        numeroUsuario = entrada.nextInt();
+        return numeroUsuario;
+    }
+    public static boolean comprobar (int numeroUsuario){
+        boolean parImpar=true;
+        if ((numeroUsuario%2) == 0){
+            parImpar=true;
         }
         else{
-            System.out.println("El numero "+numero+" es impar");
+            parImpar=false;
+        }
+        return parImpar;
+    }
+    public static void main(String[] args) {
+        int numeroUsuario=pedirNumero();
+        if (comprobar(numeroUsuario)) {
+            System.out.println("Miguel Angel dice que el numero "+numeroUsuario+" es par");
+        }
+        else{
+            System.out.println("Miguel Angel dice que el numero "+numeroUsuario+" es impar");
         }
     }    
 }
