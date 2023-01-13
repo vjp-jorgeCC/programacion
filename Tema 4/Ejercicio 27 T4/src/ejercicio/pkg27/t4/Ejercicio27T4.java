@@ -34,11 +34,12 @@ public class Ejercicio27T4 {
         Scanner entrada=new Scanner (System.in);
         String cara,cruz,resultado;
         boolean caraCruz;
-        boolean caraCruzUsuario;        
+        boolean caraCruzUsuario;
+        int moneda;
         cara="cara";
         cruz="cruz";
         do {
-            int moneda=moneda();
+            moneda=moneda();
             System.out.println("Introduce cara o cruz ");
             resultado=entrada.nextLine();
             caraCruz=caraCruz(moneda);

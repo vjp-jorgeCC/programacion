@@ -27,9 +27,12 @@ public class Ejercicio24T4 {
         return edad;
     }
     public static void mayorDeEdad(String nombre, int edad){
+        //SI LA EDAD ES MAS DE 18 LE MUESTRO SU NOMBRE Y LE DIGO QUE ES MAYOR DE EDAD
         if (edad>=18) {
             System.out.println(nombre+ " es mayor de edad");
         }
+        
+        //SI LA EDAD ES MENOS DE 18 LE MUESTRO SU NOMBRE Y LE DIGO QUE NO ES MAYOR DE EDAD
         else{
             System.out.println(nombre+ " no es mayor de edad");
         }
@@ -37,8 +40,14 @@ public class Ejercicio24T4 {
     public static void main(String[] args) {
         String nombre;
         int edad;
+        
+        //LLAMO AL METODO PARA SABER EL NOMBRE
         nombre=nombre();
+        
+        //LLAMO AL METODO PARA SABER LA EDAD
         edad=edad();
+        
+        //LLAMO AL METODO PASANDOLE NOMBRE Y EDAD
         mayorDeEdad(nombre,edad);
     }
     

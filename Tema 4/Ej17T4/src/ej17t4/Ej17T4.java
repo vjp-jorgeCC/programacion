@@ -18,23 +18,23 @@ public class Ej17T4 {
      */
     public static void main(String[] args) {
         Scanner entrada=new Scanner (System.in);
-        char letra;
+        char letraUsuario;
         int contador=0;
         double aleatorio=Math.random() * (122 - 97) + 97;
-        char aleatorioEntero=(char)aleatorio;
+        char letraGenerada=(char)aleatorio;
         do {
             System.out.println("Introduce una letra");
-            letra=entrada.nextLine().charAt(0);
+            letraUsuario=entrada.nextLine().charAt(0);
             contador++;
-            if (letra<aleatorioEntero) {
+            if (letraUsuario<letraGenerada) {
                 System.out.println("La letra esta despues.");
             }
             else{
                 System.out.println("La letra esta antes");
             }
-        } while (letra!=aleatorioEntero);
-        System.out.println("Enhorabuena la letra era la "+aleatorioEntero);
-        System.out.println("El numro de intentos ha sido: "+contador);
+        } while (letraUsuario!=letraGenerada);
+        System.out.println("Enhorabuena la letra era la "+letraGenerada);
+        System.out.println("El numero de intentos ha sido: "+contador);
     }
     
 }

@@ -12,6 +12,13 @@ import java.util.Scanner;
  * @author jcidc07
  */
 public class Ejercicio26T4 {
+    public static int pedirNumero(){
+        Scanner entrada =new Scanner (System.in);
+        int numero;
+        System.out.println("Introduce un numero: ");
+        numero=entrada.nextInt();
+        return numero;
+    }
     public static boolean esPrimo(int n1){
         boolean primo=true;
         int divisor=2;
@@ -24,11 +31,9 @@ public class Ejercicio26T4 {
         return primo;
     }
     public static void main(String[] args) {
-        Scanner entrada =new Scanner (System.in);
         int numero;
         boolean primo;
-        System.out.println("Introduce un numero: ");
-        numero=entrada.nextInt();
+        numero=pedirNumero();
         primo=esPrimo(numero);
         if (primo==false) {
             System.out.println("No es primo");
