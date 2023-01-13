@@ -13,6 +13,7 @@ public class Producto {
     private String nombre;
     private int precio;
     private boolean saludable;
+    String esSaludable;
     
     Producto(){
         nombre="manzana";
@@ -41,7 +42,18 @@ public class Producto {
     public int getPrecio(){
         return precio;
     }
-    public boolean getSaludable(){
+    public boolean isSaludable(){
         return saludable;
+    }
+    
+    public String esSaludable(){
+        if (saludable==true) {
+            nombre="Saludable";
+        }
+        else{
+            nombre="No Saludable";
+        }
+        return nombre;
+   
     }
 }

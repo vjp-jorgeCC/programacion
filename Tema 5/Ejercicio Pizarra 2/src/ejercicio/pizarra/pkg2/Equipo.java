@@ -13,6 +13,16 @@ public class Equipo {
     private String nombre;
     private Futbolista futbolistas;
     
+    public Equipo(){
+        nombre="";
+        futbolistas=null;
+    }
+    
+    public Equipo (String nombre, Futbolista futbolista){
+        this.nombre=nombre;
+        this.futbolistas=futbolista;
+    }
+    
     public void setNombre(String nom){
        nombre=nom;
     }
@@ -26,5 +36,4 @@ public class Equipo {
     public Futbolista getFutbolista(){
         return futbolistas;
     }
-   // Para pasar el futbolista al equipo la clase tiene que ser de tipo FUTBOLISTA
 }

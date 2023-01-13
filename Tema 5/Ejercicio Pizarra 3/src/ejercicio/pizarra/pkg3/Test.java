@@ -21,12 +21,12 @@ public class Test {
         System.out.println("----------PRODUCTO 1----------");
         System.out.println("Nombre: "+producto1.getNombre());
         System.out.println("Precio: "+producto1.getPrecio()+"€");
-        System.out.println("¿Es Saludable? "+producto1.getSaludable());
+        System.out.println(producto1.esSaludable());
         
         System.out.println("----------PRODUCTO 2----------");
         System.out.println("Nombre: "+producto2.getNombre());
         System.out.println("Precio: "+producto2.getPrecio()+"€");
-        System.out.println("¿Es Saludable? "+producto2.getSaludable());
+        System.out.println(producto2.esSaludable());
     }
     
 }

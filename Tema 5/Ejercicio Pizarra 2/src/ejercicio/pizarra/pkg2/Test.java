@@ -26,13 +26,8 @@ public class Test {
         System.out.println("Nombre: "+futbolista2.getNombre());
         System.out.println("Posicion: "+futbolista2.getPosicion());
         
-        Equipo equipo1=new Equipo();
-        Equipo equipo2=new Equipo();
-        
-        equipo1.setNombre("Atletico de madrid");
-        equipo2.setNombre("Real madrid");
-        equipo1.setFutbolista(futbolista1);
-        equipo2.setFutbolista(futbolista2);
+        Equipo equipo1=new Equipo("Atletico de madrid",futbolista1);
+        Equipo equipo2=new Equipo("Real madrid",futbolista2);
                         
         System.out.println("------------EQUIPO 1------------");
         System.out.println("Nombre: "+equipo1.getNombre());

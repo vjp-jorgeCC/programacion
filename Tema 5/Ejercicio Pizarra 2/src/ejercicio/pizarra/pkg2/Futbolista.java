@@ -13,11 +13,11 @@ public class Futbolista {
     private String nombre;
     private String posicion;
     
-    Futbolista(){
+    public Futbolista(){
         nombre="Jorge";
         posicion="Defensa";
     }
-    Futbolista(String nom, String pos){
+    public Futbolista(String nom, String pos){
         nombre=nom;
         posicion=pos;
     }
