@@ -15,36 +15,49 @@ public class Direccion {
     private int piso;
     private String ciudad;
     
-    Direccion(String ca,int num,int pis,String ciu){
+    public Direccion(String ca,int num,int pis,String ciu){
         calle=ca;
         numero=num;
         piso=pis;
         ciudad=ciu;
     }
-    
-    public void setCalle(String ca){
-        calle=ca;
+    public Direccion(){
+        calle="";
+        numero=0;
+        piso=0;
+        ciudad="";
     }
-    public void setNumero(int num){
-        numero=num;
-    }
-    public void setPiso(int pis){
-        piso=pis;
-    }
-    public void setCiudad(String ciu){
-        ciudad=ciu;
-    }
-    
-    public String getCalle(){
+
+    public String getCalle() {
         return calle;
     }
-    public int getNumero(){
+
+    public void setCalle(String calle) {
+        this.calle = calle;
+    }
+
+    public int getNumero() {
         return numero;
     }
-    public int getPiso(){
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public int getPiso() {
         return piso;
     }
-    public String getCiudad(){
+
+    public void setPiso(int piso) {
+        this.piso = piso;
+    }
+
+    public String getCiudad() {
         return ciudad;
     }
+
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
+    }
+    
 }

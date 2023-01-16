@@ -37,6 +37,7 @@ public class Tienda {
                     System.out.println("Ha elegido comprar "+producto1.getNombre());
                     System.out.println("¿Cuantas unidades desea?");
                     eleccion=entrada.nextInt();
+                    cuenta=cuenta+(eleccion*producto1.getPrecio());
                     if (eleccion>=producto1.getStock()) {
                         System.out.println("Lo sentimos, solo tenemos disponibles "+producto1.getStock()+" unidades");
                         System.out.println("¿Desea comprar otro producto? 1-SI, 2-NO");                        
@@ -47,18 +48,14 @@ public class Tienda {
                     }
                         otro=entrada.nextInt();
                     if (otro==1) {
-                        cuenta=cuenta+(eleccion*producto1.getPrecio());
                         menu(producto1,producto2,producto3);
-                    }
-                    else{
-                        cuenta=cuenta+(eleccion*producto1.getPrecio());
-                        System.out.println("El precio total es de "+cuenta+"€");
                     }
                     break;
                 case 2:
                     System.out.println("Ha elegido comprar "+producto2.getNombre());
                     System.out.println("¿Cuantas unidades desea?");
                     eleccion=entrada.nextInt();
+                    cuenta=cuenta+(eleccion*producto2.getPrecio());
                     if (eleccion>=producto2.getStock()) {
                         System.out.println("Lo sentimos, solo tenemos disponibles "+producto2.getStock()+" unidades");
                         System.out.println("¿Desea comprar otro producto? 1-SI, 2-NO");
@@ -70,18 +67,14 @@ public class Tienda {
                     }
                         otro=entrada.nextInt();
                     if (otro==1) {
-                        cuenta=cuenta+(eleccion*producto2.getPrecio());
                         menu(producto1,producto2,producto3);
-                    }
-                    else{
-                        cuenta=cuenta+(eleccion*producto2.getPrecio());
-                        System.out.println("El precio total es de "+cuenta+"€");
                     }
                     break;
                 case 3:
                     System.out.println("Ha elegido comprar "+producto3.getNombre());
                     System.out.println("¿Cuantas unidades desea?");
                     eleccion=entrada.nextInt();
+                    cuenta=cuenta+(eleccion*producto3.getPrecio());
                     if (eleccion>=producto3.getStock()) {
                         System.out.println("Lo sentimos, solo tenemos disponibles "+producto3.getStock()+" unidades");
                         System.out.println("¿Desea comprar otro producto? 1-SI, 2-NO");
@@ -92,16 +85,12 @@ public class Tienda {
                             
                     }
                        otro=entrada.nextInt(); 
-                    if (otro==1) {
-                        cuenta=cuenta+(eleccion*producto3.getPrecio());
+                    if (otro==1) {                        
                         menu(producto1,producto2,producto3);
-                    }
-                    else{
-                        cuenta=cuenta+(eleccion*producto1.getPrecio());
-                        System.out.println("El precio total es de "+cuenta+"€");
                     }
                     break;                
             }
+            System.out.println("El precio total es "+cuenta);
         }
     public static void main(String[] args) {
         Producto producto1=new Producto("Peces",10,40);

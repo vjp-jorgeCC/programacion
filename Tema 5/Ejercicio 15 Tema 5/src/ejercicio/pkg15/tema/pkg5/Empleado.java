@@ -14,9 +14,15 @@ public class Empleado {
     private int salario;
     private Direccion direccio;
     
-    Empleado(String nom,int sal){
+    public Empleado(String nom,int sal,Direccion dir){
         nombre=nom;
         salario=sal;
+        direccio=dir;
+    }
+    public Empleado(){
+        nombre="";
+        salario=0;
+        direccio=null;
     }
     
     public void setNombre(String nom){
@@ -38,4 +44,5 @@ public class Empleado {
     public Direccion getEmepleado(){
         return direccio;
     }
+    
 }
