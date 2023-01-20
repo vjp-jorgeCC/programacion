@@ -46,6 +46,15 @@ public class Bombas extends Armas {
         super.quitarSeguro();
         System.out.println("Quitando seguro de la bomba");
     }
+
+    @Override
+    public void usarArma() {
+        super.usarArma();
+        quitarSeguro();
+        System.out.println("Usando la bomba");
+    }
+    
+    
     
     
 }

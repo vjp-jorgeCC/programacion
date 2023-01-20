@@ -36,5 +36,11 @@ public class Pistola extends Armas {
         System.out.println("Quitando seguro de la pistola");
     }
     
+    @Override
+    public void usarArma() {
+        super.usarArma();
+        quitarSeguro();
+        System.out.println("Usando la pistola");
+    }
     
 }

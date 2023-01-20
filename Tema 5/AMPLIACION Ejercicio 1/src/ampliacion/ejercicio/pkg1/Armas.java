@@ -43,5 +43,8 @@ public class Armas {
     public void quitarSeguro(){
         System.out.println("");
     }
+    public void usarArma(){
+        System.out.println("");
+    }
     
 }

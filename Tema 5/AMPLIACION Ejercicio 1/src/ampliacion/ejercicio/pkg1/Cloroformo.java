@@ -37,6 +37,12 @@ public class Cloroformo extends Armas {
         super.quitarSeguro();
         System.out.println("Quitando seguro del bote de cloroformo");
     }
+    @Override
+    public void usarArma() {
+        super.usarArma();
+        quitarSeguro();
+        System.out.println("Usando el Cloroformo");
+    }
     
     
 }

@@ -21,9 +21,11 @@ public class AMPLIACIONEjercicio1 {
         
         Pistola pistola1=new Pistola(8, true);
         
-        bomba1.quitarSeguro();
+        pistola1.usarArma();
         
-        pistola1.quitarSeguro();
+        bomba1.usarArma();
+        
+        cloroformo1.usarArma();
     }
     
 }
