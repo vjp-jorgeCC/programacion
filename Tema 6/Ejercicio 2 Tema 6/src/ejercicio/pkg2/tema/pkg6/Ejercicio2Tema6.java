@@ -24,9 +24,9 @@ public class Ejercicio2Tema6 {
     }
     public static void intercambiarDatos(int vNum[]){
         int aux;
-        aux=vNum[2];
-        vNum[2]=vNum[4];
-        vNum[4]=aux;
+        aux=vNum[1];
+        vNum[1]=vNum[3];
+        vNum[3]=aux;
     }
     public static void main(String[] args) {
         int[] vNum=new int[7];

@@ -5,6 +5,7 @@
  */
 package ejercicio.pkg3.tema.pkg6;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -17,11 +18,18 @@ public class Ejercicio3Tema6 {
         int longitud;
         System.out.println("Introduce un numero entre el 1 y el 10: ");
         do {
-            longitud=entrada.nextInt();
-            if (longitud<0||longitud>10) {
-                System.out.println("Introduce numero valido"); 
+            try{
+                longitud=entrada.nextInt();
             }
-        } while (longitud<0||longitud>10);
+            catch (InputMismatchException e){
+                System.out.println("ERROR, has introducido una letra");
+                longitud=0;
+            }
+            if (longitud<=0||longitud>10) {
+                System.out.println("ERROR, introduce numero valido comprendido entre 1 y 10."); 
+            }
+        } while (longitud<1||longitud>10);
+        
         return longitud;
     }
     public static void rellenarAleatorio(int vNum[]){
