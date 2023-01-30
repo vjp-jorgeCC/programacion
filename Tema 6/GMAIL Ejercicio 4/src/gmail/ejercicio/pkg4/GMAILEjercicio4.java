@@ -29,18 +29,15 @@ public class GMAILEjercicio4 {
         }
     }
     public static boolean comprobarArray(int array1[], int array2[]){
-        int j=0;
         boolean comprobar=false;
-        for (int i = 0; i < array1.length; i++) {
-            if (array1[i]==array2[j]) {
+        int i=0;
+        while(i<array1.length && !comprobar)
+            if (array1[i]!=array2[i]) {
                 comprobar=true;
-                j++;
             }
             else{
-                comprobar=false;
-                i=array1.length;
-            }          
-        }
+                i++;
+            }
         return comprobar;
     }
     public static void main(String[] args) {
