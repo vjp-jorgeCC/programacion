@@ -47,7 +47,7 @@ public class Ejercicio14Tema6 {
         media=suma/28;
         return media;
     }
-    public static int diaMasCaluroso(int array[][]){
+    public static int diaMasCaluroso(int array[][], String dias[]){
         int caluroso=array[0][0];
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
@@ -59,7 +59,7 @@ public class Ejercicio14Tema6 {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 if (array[i][j]==caluroso) {
-                    System.out.println("");
+                    System.out.println("El dias mas caluroso es el: "+dias[j]+" De la semana "+i+" Con una temepratuta de : "+array[i][j]);
                 }
             }
         }
@@ -85,7 +85,7 @@ public class Ejercicio14Tema6 {
                     System.out.println("La temperatura media del mes es: "+temperaturaMediaDelMes(array));
                     break;
                 case 4:
-                    System.out.println("El dia mas caluroso del mes es: "+dias[diaMasCaluroso(array)]);
+                    diaMasCaluroso(array, dias);
                     break;
                 case 5:
                     System.out.println("Adios...");
