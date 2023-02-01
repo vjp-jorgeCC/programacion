@@ -32,8 +32,8 @@ public class Ejercicio15Tema6 {
         }
     }
     public static void mostrarVentasReves(int array [], String meses[]){
-        int iniciador=array.length-1;
-        for (int i = iniciador; i >= 0; i--) {
+        int inicio=array.length-1;
+        for (int i = inicio; i >= 0; i--) {
             System.out.println(meses[i]+" Ventas: "+array[i]);
         }
     }
