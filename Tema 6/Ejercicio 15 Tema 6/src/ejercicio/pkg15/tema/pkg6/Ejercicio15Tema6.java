@@ -15,10 +15,11 @@ public class Ejercicio15Tema6 {
     public static int pedirNumero(){
         Scanner entrada = new Scanner (System.in);
         int opc=entrada.nextInt();
+        
         return opc;
     }
     public static int generarlAleatorio(){
-        int alt=(int) ((Math.random()*100)+10);
+        int alt=(int) ((Math.random()*91)+10);
         return alt;
     }
     public static void rellenarVentas(int array[]){
@@ -45,11 +46,13 @@ public class Ejercicio15Tema6 {
         System.out.println("La suma total de las ventas del año es de : "+suma);
     }
     public static void ventasDeLosMesesPares(int array[], String meses[]){
+        int suma=0;
         for (int i = 0; i < array.length; i++) {
-            if (i%2==0) {
-                System.out.println("La ventas del mes "+meses[i+1]+" Es de : "+array[i+1]);
+            if (i%2!=0) {
+                suma=suma+array[i];
             }
         }
+        System.out.println("La suma total de los meses pares es: "+suma);
     }
     public static void mesConMasVentas(int array[], String meses[]){
         int masVentas=array[0];
