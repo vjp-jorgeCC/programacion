@@ -22,24 +22,24 @@ public class Ejercicio6Tema7 {
         String nombre=entrada.nextLine();
         return nombre;
     }
-    public static double sueldo(Empleado almacen[], int i){
+    public static double sueldo(Empleado empleadoAux){
         double sueldo;
         int resto;
         double tarifa;
-        if (almacen[i].getHorasTrabajo()>40) {
-            resto=almacen[i].getHorasTrabajo()%40;
-            tarifa=resto*(almacen[i].getTarifaPorHoras()*1.5);
-            sueldo=(almacen[i].getTarifaPorHoras()*40)+tarifa;           
+        if (empleadoAux.getHorasTrabajo()>40) {
+            resto=empleadoAux.getHorasTrabajo()%40;
+            tarifa=resto*(empleadoAux.getTarifaPorHoras()*1.5);
+            sueldo=(empleadoAux.getTarifaPorHoras()*40)+tarifa;           
         }
         else{
-            sueldo= (double) almacen[i].getHorasTrabajo()*almacen[i].getTarifaPorHoras();
+            sueldo= (double) empleadoAux.getHorasTrabajo()*empleadoAux.getTarifaPorHoras();
         }
         return sueldo;
     }
     public static void crearEmpleados(Empleado almacen[]){
         int contador=1;
         for (int i = 0; i < almacen.length; i++) {
-            almacen[i]=new Empleado("nombre", 0, 0);
+            almacen[i]=new Empleado();
             System.out.println("------ Empleado "+contador+"------");
             System.out.println("Introduzca el nombre del empleado: ");
             almacen[i].setNombre(pedirNombre());
@@ -54,8 +54,11 @@ public class Ejercicio6Tema7 {
     public static void mostrarEmpleados(Empleado almacen[]){
         System.out.println("--- SUELDO BRUTO DE LOS EMPLEADOS ---");
         for (int i = 0; i < almacen.length; i++) {
-            System.out.println(almacen[i].getNombre()+" trabajo "+almacen[i].getHorasTrabajo()+" , cobra "+almacen[i].getTarifaPorHoras()+" euros la hora,"
-                    + "por lo que le corresponde un sueldo de "+sueldo(almacen, i));
+            if (almacen[i] != null) {
+               System.out.println(almacen[i].getNombre()+" trabajo "+almacen[i].getHorasTrabajo()
+                    +" , cobra "+almacen[i].getTarifaPorHoras()+" euros la hora,"
+                    + "por lo que le corresponde un sueldo de "+sueldo(almacen[i])); 
+            }            
         }
     }
     public static void main(String[] args) {
@@ -63,6 +66,5 @@ public class Ejercicio6Tema7 {
         Empleado[] almacen=new Empleado[pedirNumero()];
         crearEmpleados(almacen);
         mostrarEmpleados(almacen);
-    }
-    
+    }    
 }
