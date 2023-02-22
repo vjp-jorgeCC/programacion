@@ -24,7 +24,6 @@ public class Ejercicio15 {
     }
     public static void rellenarPeliculas(Peliculas vPeliculas[]){
         for (int i = 0; i < vPeliculas.length; i++) {
-            if (vPeliculas [i] != null){
                 System.out.println("----- PELICULA "+(i+1)+" -----");
                 vPeliculas[i] = new Peliculas();
                 System.out.println("Introduce el titulo: ");
@@ -36,7 +35,6 @@ public class Ejercicio15 {
             }
             
         }
-    }
     public static void mostrarPeliculas(Peliculas vPeliculas[]){
         for (int i = 0; i < vPeliculas.length; i++) {
             if (vPeliculas [i] != null){
