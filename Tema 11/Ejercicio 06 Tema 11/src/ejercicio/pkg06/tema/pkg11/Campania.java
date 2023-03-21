@@ -117,14 +117,19 @@ public class Campania {
         }
         return dineroRecaudado;
     }
-    public void ordenarDonaciones(){
-       int[] donaciones = new int[this.donaciones.size()];
+    public void buscarPosicion(Donacion[] donaciones, Donacion objetoDonacion){
+        
+    }
+    public void ordenarDonaciones( ){
+        
+       Donacion[] donaciones = new Donacion[this.donaciones.size()];
+       int indice = 0;
        Iterator<Donacion> it = this.donaciones.iterator();
        Donacion objetoDonacion;
         
         while(it.hasNext()){
             objetoDonacion = it.next();
-            donaciones[0] = objetoDonacion.getCantidad();
+            buscarPosicion(donaciones, objetoDonacion);
         }
     }
 }

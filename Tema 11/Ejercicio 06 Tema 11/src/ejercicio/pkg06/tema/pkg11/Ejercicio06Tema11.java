@@ -42,6 +42,8 @@ public class Ejercicio06Tema11 {
                     System.out.println("Total dinero recaudado: "+campania.totalDineroRecaudado());
                     break;
                 case 6:
+                    campania.ordenarDonaciones();
+                    break;
                     
             }
         } while (opc!=7);        
