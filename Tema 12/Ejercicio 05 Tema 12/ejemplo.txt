@@ -1,0 +1,12 @@
+Nombre: jorge
+Edad: 23
+Numero de telefono: 618710468
+Nombre: christian
+Edad: 45
+Numero de telefono: 321313131
+Nombre: jorge
+Edad: 23
+Numero de telefono: 3213132
+Nombre: sara
+Edad: 45
+Numero de telefono: 666666666
