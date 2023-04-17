@@ -123,5 +123,4 @@ public class Ejercicio06Tema12 {
         String nombre = pedirNombre();
         menu(nombre);
     }
-    
 }
