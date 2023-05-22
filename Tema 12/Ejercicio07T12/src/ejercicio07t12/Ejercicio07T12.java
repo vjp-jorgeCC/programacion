@@ -36,33 +36,14 @@ public class Ejercicio07T12 {
         return linea;
     }
     
-    public static void escribirFichero(String nomFich, String linea){
+    public static void escribirFichero(String nomFich, String linea) throws IOException{
         FileWriter fw = null;
         PrintWriter pw = null;
-        try{
             fw = new FileWriter(nomFich, true);
             pw = new PrintWriter(fw);
             pw.println(linea);
-        }
-        catch(FileNotFoundException e){
-            System.out.println("Imposible crear fichero");
-        }
-        catch(IOException e){
-            System.out.println(e.getMessage());
-        }
-        finally{
-            if  (fw != null){
-                try{
-                    fw.close();
-                }
-                catch(IOException e){
-                    System.out.println(e.getMessage());
-                }
-            }
-            if  (pw != null){
-                pw.close();
-            }
-        }
+            fw.close();
+            pw.close();
     }
     
     private static void intercambiarMayMin(String linea) {
@@ -99,45 +80,21 @@ public class Ejercicio07T12 {
         }
     }
     
-    public static void convertirMausculasMinusculas(String nomFich){
+    public static void convertirMausculasMinusculas(String nomFich) throws FileNotFoundException, IOException{
         FileReader fr = null;
         BufferedReader br = null;
-        try{
             fr = new FileReader(nomFich);
             br = new BufferedReader(fr);
             leerFichero(br);
-        }
-        catch(FileNotFoundException e){
-            System.out.println("No se ha encontrado el archivo "+nomFich);
-            System.out.println(e.getMessage());
-        }
-        catch(IOException e){
-            System.out.println(e.getMessage());
-        }
-        finally{
-            if  (fr != null){
-                try{
-                    fr.close();
-                }
-                catch(IOException e){
-                    System.out.println(e.getMessage());
-                }
-            }
-            if  (br != null){
-                try{
+            fr.close();
                     br.close();
-                }
-                catch(IOException e){
-                    System.out.println(e.getMessage());
-                }
-            }
-        }
+           
     }
     
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner teclado = new Scanner(System.in);
         String linea, resp;
         String nomFich;

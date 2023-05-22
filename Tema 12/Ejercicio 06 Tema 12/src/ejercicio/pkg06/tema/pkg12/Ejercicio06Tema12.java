@@ -19,40 +19,25 @@ import java.util.Scanner;
  * @author jcidc07
  */
 public class Ejercicio06Tema12 {
-    public static void menu(String nombre){
-    Scanner entrada = new Scanner (System.in);
-    int opc;
-        do {            
+
+    public static void menu(String nombre) throws IOException {
+        Scanner entrada = new Scanner(System.in);
+        int opc;
+        do {
             System.out.println("1. Añadir numeros pares a un fichero");
             System.out.println("2. Mostrar fichero");
             System.out.println("3. Salir");
-            opc=entrada.nextInt();
-            switch(opc){
+            opc = entrada.nextInt();
+            switch (opc) {
                 case 1:
                     ArrayList numerosPares = crearArray();
                     FileWriter fw = null;
                     PrintWriter pw = null;
-                    try {
-                        fw = new FileWriter(nombre, true);
-                        pw = new PrintWriter(fw);
-                        anadirPares(pw,numerosPares);
-                        
-                    } catch (IOException e) {
-                        System.out.println("Error de entrada/salida");
-                        System.out.println(e.getMessage());
-                    } finally{
-                        if (pw != null) {
-                            pw.close();
-                        }
-                        if (fw != null) {
-                            try {
-                                fw.close();
-                            } catch (IOException e) {
-                                System.out.println("Error de entrada / salida");
-                                System.out.println(e.getMessage());
-                            }
-                        }
-                    }
+                    fw = new FileWriter(nombre, true);
+                    pw = new PrintWriter(fw);
+                    anadirPares(pw, numerosPares);
+                    pw.close();
+                    fw.close();
                     break;
                 case 2:
                     FileReader fr = null;
@@ -63,9 +48,9 @@ public class Ejercicio06Tema12 {
                         leerFichero(br);
                     } catch (FileNotFoundException e) {
                         System.out.println("No se ha encontrado el archivo.");
-                    } catch(IOException e){
+                    } catch (IOException e) {
                         System.out.println("Error de lectura");
-                    } finally{
+                    } finally {
                         if (br != null) {
                             try {
                                 br.close();
@@ -84,41 +69,48 @@ public class Ejercicio06Tema12 {
                     break;
                 case 3:
                     System.out.println("Adios....");
-                    break;
+
             }
-        } while (opc!=3);
+            while (opc != 3);
+        }
+    }
+     
         
-}
-    public static void leerFichero(BufferedReader br) throws IOException{
+
+    public static void leerFichero(BufferedReader br) throws IOException {
         String linea;
         linea = br.readLine();
-        while(linea != null){
+        while (linea != null) {
             System.out.println(linea);
             linea = br.readLine();
         }
     }
-    public static void anadirPares(PrintWriter pw, ArrayList<Integer> pares){
+
+    public static void anadirPares(PrintWriter pw, ArrayList<Integer> pares) {
         for (int i = 0; i < pares.size(); i++) {
             pw.println(pares.get(i));
         }
         System.out.println("Numeros añadidos correctamente al fichero");
     }
-    public static String pedirNombre(){
-        Scanner entrada = new Scanner (System.in);
+
+    public static String pedirNombre() {
+        Scanner entrada = new Scanner(System.in);
         String nombre;
         nombre = entrada.nextLine();
         return nombre;
     }
-    public static ArrayList crearArray(){
+
+    public static ArrayList crearArray() {
         ArrayList<Integer> pares = new ArrayList<>();
         for (int i = 0; i <= 100; i++) {
-            if (i%2==0) {
+            if (i % 2 == 0) {
                 pares.add(i);
             }
         }
         return pares;
     }
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws IOException {
         System.out.println("Introduce el nombre del fichero");
         String nombre = pedirNombre();
         menu(nombre);
