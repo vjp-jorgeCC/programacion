@@ -26,7 +26,7 @@ public class Nave implements Serializable {
     public Nave(String nombre, int metrosCuadrados, ArrayList<Empresa> listaEmpresas) {
         this.nombre = nombre;
         this.metrosCuadrados = metrosCuadrados;
-        this.listaEmpresas = listaEmpresas;
+        this.listaEmpresas = new ArrayList<>();
     }
 
     public String getNombre() {
